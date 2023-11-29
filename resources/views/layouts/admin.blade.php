@@ -13,7 +13,13 @@
 
     @include('admin.partials.header')
 
-    @yield('content')
+
+
+
+        @yield('content')
+
+
+
 
 </body>
 </html>

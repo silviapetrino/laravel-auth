@@ -6,10 +6,10 @@
     <nav>
         <ul>
             <li>
-                <a href="#">Dashboard</a>
+                <a href="{{ route('admin.home')}}">Dashboard</a>
             </li>
             <li>
-                <a href="#">Lista Post</a>
+                <a href="{{ route('admin.projects.index')}}">Project list</a>
             </li>
         </ul>
     </nav>

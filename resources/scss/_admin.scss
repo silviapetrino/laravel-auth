@@ -1,5 +1,16 @@
 header {
     height: 80px;
+    .links a {
+        color: white;
+        padding: 10px;
+        
+        &:hover {
+            background-color: rgba($color: rgb(245, 235, 235), $alpha: .8);
+            color:black;
+
+            border-radius: 5px;
+        }
+    }
 }
 
 aside {
@@ -8,11 +19,22 @@ aside {
 
         ul {
             list-style: none;
+            li {
+                padding-bottom: 20px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    padding: 10px;
 
-            li a {
-                color: white;
-                text-decoration: none;
+                    &:hover {
+                        background-color: rgba($color: rgb(245, 235, 235), $alpha: .8);
+                        color:black;
+
+                        border-radius: 5px;
+                    }
+                }
             }
+
         }
 
     }
