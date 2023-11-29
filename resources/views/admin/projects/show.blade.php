@@ -5,7 +5,7 @@
 
 <div class="container">
 
-    <h1 class="py-5">Project Details</h1>
+    <h1 class="py-5 text-white">Project Details</h1>
 
 
         <div class="card mb-5" style="width: 35rem;">
@@ -21,7 +21,7 @@
             </div>
 
         </div>
-        <a class="btn btn-primary" href="{{ route('admin.projects.index')}}">Go back to projects list</a>
+        <a class="btn btn-light fw-bold" href="{{ route('admin.projects.index')}}"><i class="fa-solid fa-arrow-left"></i></a>
 
 </div>
 
