@@ -2,8 +2,10 @@
         <nav class="navbar navbar-dark h-100">
             <div class="container-fluid">
                 <div class="links">
-                    <a href="{{ route('home')}}" target="_blank" class="navbar-brand p-1">Torna al sito</a>
-                    <a class="text-decoration-none" href="{{ route('admin.home')}}"><i class="fa-solid fa-house"></i></a>
+                    <a href="{{ route('home')}}" target="_blank" class="navbar-brand p-1">
+                        <i class="fa-solid fa-circle-arrow-left"></i>
+                        <span>Back to public site</span>
+                    </a>
                 </div>
                 {{-- logout  --}}
                 <form action="{{route('logout')}}" class="d-flex" method="POST" role="search">

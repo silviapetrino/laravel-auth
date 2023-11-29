@@ -3,6 +3,6 @@
 
 @section('content')
 
-    @include('admin.partials.sidebar')
+   
 
 @endsection

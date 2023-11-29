@@ -6,7 +6,7 @@
     <nav>
         <ul>
             <li>
-                <a href="{{ route('admin.home')}}">Dashboard</a>
+                <a href="{{ route('admin.home')}}"><i class="fa-solid fa-house"></i></a>
             </li>
             <li>
                 <a href="{{ route('admin.projects.index')}}">Project list</a>
