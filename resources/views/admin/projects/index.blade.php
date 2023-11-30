@@ -6,7 +6,7 @@
     <div class="container">
         <div class="top d-flex align-items-center justify-content-between my-4">
             <h1 class="text-white">Projects List</h1>
-            <a class="btn btn-light" href="{{route('admin.projects.create')}}">
+            <a class="btn btn-light" href="{{ route('admin.projects.create') }}">
                 <i class="fa-solid fa-plus fa-beat-fade"></i>
                 <span>Add new project</span>
             </a>

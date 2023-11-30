@@ -17,6 +17,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::orderBy('id', 'desc')->paginate(5);
+      
         return view('admin.projects.index', compact('projects'));
     }
 
@@ -27,7 +28,11 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $title = 'Add new project';
+        $method = 'POST';
+        $route = route('admin.projects.store');
+        $project = null;
+        return view('admin.projects.create-edit', compact('title','method', 'route', 'project'));
     }
 
     /**
@@ -64,9 +69,12 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        //
+        $title = 'Edit project';
+        $method = 'PUT';
+        $route = route('admin.projects.update', $project);
+        return view('admin.projects.create-edit', compact('title','method', 'route', 'project'));
     }
 
     /**

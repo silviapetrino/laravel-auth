@@ -4,9 +4,10 @@
 @section('content')
 
 <div class="container py-5">
-    <form action="{{ route('admin.projects.store')}}" method="POST">
+    <form action="{{ $route }}" method="POST" class="text-white">
         @csrf
-        <h2>Add new project</h2>
+        @method($method)
+        <h2>{{ $title }}</h2>
 
 
             <div class="mb-3">
