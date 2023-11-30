@@ -19,6 +19,7 @@
                     <li>{{ $error }}</li>
                     @endforeach
                 </ul>
+            </div>
         @endif
 
 
@@ -26,7 +27,7 @@
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title', $project?->title)}}">
                 @error('title')
-                <p class="text-danger">{{ $message }}</p>
+                <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
 
@@ -34,7 +35,7 @@
                 <label for="description" class="form-label">Description</label>
                 <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" value="{{ old('title', $project?->description)}}">
                 @error('description')
-                <p class="text-danger">{{ $message }}</p>
+                <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
 
@@ -42,7 +43,7 @@
                 <label for="release_date" class="form-label">release date: </label>
                 <input type="text" class="form-control @error('release_date') is-invalid @enderror" id="release_date" name="release_date" value="{{ old('title', $project?->release_date)}}">
                 @error('release_date')
-                <p class="text-danger">{{ $message }}</p>
+                <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
 
