@@ -10,6 +10,7 @@
                 <i class="fa-solid fa-plus fa-beat-fade"></i>
                 <span>Add new project</span>
             </a>
+
         </div>
 
         <table class="table table-dark">
@@ -30,6 +31,8 @@
                     <td>{{ $project->description }}</td>
                     <td>
                         <a class="btn btn-light" href="{{ route('admin.projects.show' , $project)}}"><i class="fa-solid fa-eye"></i></a>
+                        <a class="btn btn-warning mt-1" href="{{ route('admin.projects.edit', $project) }}"><i class="fa-solid fa-pencil"></i></a>
+                        <button class="btn btn-danger mt-1" href="{{ route('admin.projects.destroy', $project) }}"><i class="fa-solid fa-trash"></i></i></button>
                     </td>
                 </tr>
             @endforeach
