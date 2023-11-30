@@ -4,6 +4,11 @@
 
 
     <div class="container">
+        @if (session('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>
+         @endif
         <div class="top d-flex align-items-center justify-content-between my-4">
             <h1 class="text-white">Projects List</h1>
             <a class="btn btn-light" href="{{ route('admin.projects.create') }}">
@@ -32,7 +37,10 @@
                     <td>
                         <a class="btn btn-light" href="{{ route('admin.projects.show' , $project)}}"><i class="fa-solid fa-eye"></i></a>
                         <a class="btn btn-warning mt-1" href="{{ route('admin.projects.edit', $project) }}"><i class="fa-solid fa-pencil"></i></a>
-                        <button class="btn btn-danger mt-1" href="{{ route('admin.projects.destroy', $project) }}"><i class="fa-solid fa-trash"></i></i></button>
+                        @include('admin.partials.delete-form', [
+                            'route' => route('admin.projects.destroy', $project),
+                            'message' => 'Are you sure you want to delete this project?',
+                        ])
                     </td>
                 </tr>
             @endforeach
