@@ -30,8 +30,10 @@ class ProjectRequest extends FormRequest
 
     public function messages(){
         return [
-            'title.required' => 'Devi inserire il titolo del post',
+            'title.required' => 'Devi inserire il titolo del progetto',
+            'title.string' => 'Inserisci un titolo valido',
             'title.max' => 'Il titolo del post non può avere più di :max caratteri',
+            'description.required' => 'Devi inserire la descrizione del progetto',
             'release_data.date' => 'Inserisci una data in questo formato: yyyy-mm-dd',
         ];
     }
