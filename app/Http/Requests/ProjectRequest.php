@@ -22,9 +22,9 @@ class ProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required'|'string'|'max:50',
-            'description' => 'required'|'string',
-            'release_date' => 'nullable'|'date'
+            'title' => ['required','string','max:50'],
+            'description' => ['required','string'],
+            'release_date' => ['nullable','date']
         ];
     }
 
